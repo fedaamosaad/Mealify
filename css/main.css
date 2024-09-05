@@ -1,0 +1,672 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #212529;
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    padding-block: 50px;
+}
+
+.main-title {
+    padding-bottom: 50px;
+}
+
+ul {
+
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    background-color: white;
+    box-shadow: 0px 0px 14px 0px #0000001b;
+}
+
+.navbar .nav-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    padding: 25px 5px;
+
+}
+
+.nav-container .icons {
+    font-size: 25px;
+
+}
+
+
+.nav-container .icons .bars {
+    display: none;
+}
+
+.nav-links ul {
+    display: flex;
+    color: #7f7f90;
+
+}
+
+.active {
+    border-bottom: 2px solid;
+    padding-bottom: 0;
+    border-color: #ce1212
+}
+
+.animated {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.animated::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+
+    background: #ce1212;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #212529;
+}
+
+.animated:hover::after {
+    width: 100%;
+
+}
+
+h1::after {
+    content: ".";
+    color: #ce1212;
+    margin-left: -10px;
+}
+
+.logo {
+    color: #212529;
+    font-weight: 500;
+}
+
+.animated {
+    padding: 5px 15px;
+}
+
+.nav-links a {
+
+    font-weight: 600;
+    color: #7f7f90;
+}
+
+.nav-container i {
+    color: #212529;
+}
+
+/*header*/
+.header {
+    background-color: #eee;
+    padding-block: 45px;
+    min-height: 100vh;
+}
+
+.header h2 {
+    font-family: "Amatic SC", sans-serif;
+    font-weight: bold;
+    font-size: 65px;
+    padding-block: 25px;
+    color: #37373f;
+}
+
+.p-header {
+    padding-top: 50px;
+}
+
+.p-header p {
+    padding-bottom: 15px;
+    font-family: 'Times New Roman', Times, serif;
+
+    line-height: 1.6;
+    font-size: 16px;
+    margin-block: 20px;
+    color: #4f4f5a
+}
+
+.header .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+
+}
+
+.header-pic {
+    padding-top: 50px;
+}
+
+.p-header,
+.header-pic {
+    width: 40%;
+}
+
+.header-pic img {
+    width: 100%;
+}
+
+.header-pic img:hover {
+    animation: shake 1s infinite;
+
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+.btns {
+    display: flex;
+    align-items: center;
+}
+
+.btn-main {
+    background-color: #ce1212;
+    color: #fff;
+    border-radius: 0px 100px 100px;
+    font-size: 19px;
+    padding: 10px 25px;
+    margin-right: 40px;
+}
+
+/* .b-video-icon{
+    height: 60px;
+width: 30px;
+background-color: #ce1212;
+border-radius: 50%;
+position: relative;
+} */
+.video-icon {
+    height: 40px;
+    width: 40px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    border: 10px solid;
+    border-color: #ce1212 #ce1212 #eee #eee;
+    box-sizing: content-box;
+    rotate: 225deg;
+
+}
+
+
+.video-icon i {
+
+    rotate: 15deg;
+}
+
+.video-btn {
+    display: flex;
+    font-weight: 600;
+    color: #37373f;
+    align-items: center;
+}
+
+/*-------------------------- chefs --------------------*/
+.chefs .container {
+    padding: 40px 5px;
+
+}
+
+.main-title {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.main-title h2 {
+    color: #7f7f90;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.main-title p {
+    font-family: "Amatic SC", sans-serif;
+    font-size: 50px;
+}
+
+.card {
+    width: 33.3%;
+}
+
+.main-title span {
+    color: #ce1212;
+}
+
+.chefs-cards {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+
+}
+
+.card-content {
+    padding: 10px 25px;
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    text-align: center;
+
+}
+
+.card-content h3 {
+    font-size: 18.5px;
+
+
+}
+
+.card {
+    margin: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 0 20px #0000001b;
+    border-radius: 8px;
+}
+
+.card .card-content span {
+    margin-block: 15px 5px;
+    /* مش شغال معرفش ليه */
+    color: #7f7f90;
+    font-size: 14px;
+}
+
+.card-content p {
+    font-style: italic;
+    font-size: 15px;
+    word-spacing: 5px;
+    color: #7f7f90;
+    letter-spacing: 0.8px;
+
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+
+.social-box i {
+    color: #37373f66;
+    font-size: 20px;
+    transition: color();
+    padding: 10px 15px;
+}
+
+.social-box {
+    position: absolute;
+    top: 40px;
+    right: -100%;
+    background-color: #ffffff4d;
+    border-radius: 8px;
+    transition: all 0.5s;
+}
+
+.card:hover {
+    scale: 1.1;
+}
+
+.card:hover .social-box {
+    right: 10px;
+    transition: all 0.5s 0.5s;
+
+}
+
+.social-box i:hover {
+    color: #37373fe6;
+}
+
+.card .chef-image {
+    position: relative;
+}
+
+.card .chef-image::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    background-image: url(../images/wave.svg);
+    width: 100%;
+    height: 60px;
+
+}
+
+/*----------- gallery------------ */
+.gallery {
+    background-color: #eee;
+
+}
+
+
+.gallery-photos {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    height: 1100px;
+}
+
+.box {
+    width: 33.3%;
+    position: relative;
+    border: 4px solid #fff;
+    overflow: hidden;
+}
+
+.box:hover .layer {
+    top: 0
+}
+
+.gallery-photos img {
+    width: 100%;
+    height: 100%;
+
+}
+
+.layer {
+
+    width: 100%;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    position: absolute;
+    top: 110%;
+    bottom: 0%;
+    left: 0;
+    right: 0;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.layer-cont {
+    text-align: center;
+}
+
+/* -------------contact---------- */
+.contact .container {
+    width: 90%;
+}
+
+.contact iframe {
+    width: 100%;
+    height: 330px;
+
+}
+
+.details {
+    display: flex;
+    margin-block: 25px;
+    gap: 15px;
+    flex-wrap: wrap;
+
+}
+
+.detail {
+    width: 49%;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    background-color: #eee;
+}
+
+.contact .icon {
+    min-width: 40px;
+    min-height: 40px;
+    background-color: #ce1212;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.detail h3 {
+    color: #7d7d7d;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #fff;
+    padding: 20px;
+    align-items: center;
+    box-shadow: 0 0 30px #00000014;
+
+}
+
+.inputs {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+
+form input,
+form textarea {
+    width: 50%;
+    padding: 15px 15px;
+    color: #212529;
+    border: 2px solid #eee;
+}
+
+.sub,
+form textarea {
+    width: 100%;
+}
+
+form textarea {
+    min-height: 150px;
+    max-height: 200px;
+}
+
+form .btn-main {
+    border-color: transparent;
+    border-radius: 100px;
+}
+
+/*---------- footer */
+footer {
+    color: #fff;
+    box-shadow: 0px -1px 5px #0007;
+    background-image: url(../images/textured-metal-background.jpg);
+}
+
+footer .container {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-logo h2 {
+    color: white;
+    font-size: 30px;
+}
+
+.footer-logo h2::after {
+    content: ".";
+    color: #ce1212;
+    margin-left: -2px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.about,
+.contact-details {
+    width: 25%;
+}
+
+.footer-logo img {
+    width: 40px;
+}
+
+.about p {
+    margin-block: 10px;
+}
+
+.about h3 {
+    text-align: center;
+    padding: 10px;
+    border-bottom: 2px solid #ddd6;
+    margin-bottom: 10px;
+}
+
+.about .social-links {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.subscription {
+    width: 50%;
+}
+
+.subscription p {
+    margin-block: 10px;
+}
+
+.sunscription-group {
+    border-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    width: 100%;
+}
+
+.sunscription-group input {
+    padding: 5px;
+
+}
+
+.subscription .btn-main {
+    border-color: transparent;
+    border-radius: 0;
+    width: 20%;
+    padding: 0;
+}
+
+.subscription input {
+    width: 80%;
+}
+
+.footer-links ul {
+    gap: 20px;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px
+}
+
+.footer-links ul li {
+    width: 48%;
+    padding: 5px;
+    position: relative;
+    margin-top: 10px;
+
+}
+
+.footer-links i {
+    font-size: 15px;
+}
+
+.contact-details h3 {
+    margin-bottom: 10px;
+}
+
+.contact-details ul li {
+    display: flex;
+    align-items: center;
+    margin-block: 10px;
+    gap: 8px;
+}
+
+.contact-details ul li i {
+    width: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ce1212;
+    font-size: 20px;
+    cursor: pointer;
+}
